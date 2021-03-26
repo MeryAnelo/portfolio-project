@@ -1,3 +1,4 @@
+{% load static %}
 /**
 * Template Name: MyResume - v2.2.1
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -260,6 +261,7 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -276,7 +278,17 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.dark-mode #hero::before{
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   bottom: 0;
   top: 0;

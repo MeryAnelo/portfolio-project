@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from debug_toolbar.toolbar import debug_toolbar_urls
 
 from blog import views
 import jobs.views
+from portfolio import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,3 +31,6 @@ urlpatterns = [
 urlpatterns += staticfiles_urlpatterns(
     
 )
+
+if settings.DEBUG:
+    urlpatterns += debug_toolbar_urls()

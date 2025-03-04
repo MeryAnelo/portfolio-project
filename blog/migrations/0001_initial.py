@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200, unique=True)),
                 ('subtitle', models.SlugField(max_length=250, unique=True)),
-                ('image', models.ImageField(upload_to='images/')),
+                ('image', models.ImageField(upload_to='post_images/')),
                 ('updated_on', models.DateTimeField(auto_now=True)),
                 ('content', models.TextField()),
                 ('created_on', models.DateTimeField(auto_now_add=True)),

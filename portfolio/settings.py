@@ -63,6 +63,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+if DEBUG:
+    MIDDLEWARE += [
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    ]
+
 ROOT_URLCONF = 'portfolio.urls'
 
 TEMPLATES = [
@@ -135,3 +140,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
